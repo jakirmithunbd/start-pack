@@ -1,0 +1,403 @@
+
+/**<==== Fonts variables ====>**/
+$hel: 'Helvetica';
+$mon: 'Montserrat';
+
+
+/**<==== Colors  ====>**/
+$primary: #031d8f;
+$secondary: #f4b930;
+$black: #000000;
+$white: #ffffff;
+
+/* =========== Import Mixin =============*/
+@import "mixin";
+
+/* Local Fonts =================================== */
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica.eot');
+    src: url('../fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Helvetica.woff2') format('woff2'),
+        url('../fonts/Helvetica.woff') format('woff'),
+        url('../fonts/Helvetica.ttf') format('truetype'),
+        url('../fonts/Helvetica.svg#Helvetica') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Style =================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,body,div,span,img,ol,ul,li,a,p,h1,h2,h3,h4,h5,h6,option,legend,label,table,th,td,tr,article,aside,caption,figure,footer,header,hgroup,mark,nav,section,time,audio,video 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    color: #807f7f;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: $mon;
+    line-height: 20px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant-ligatures: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    color: $black;
+    font-weight: 500;
+    font-family: $mon;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant-ligatures: none;
+}
+
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+    line-height: 48px;
+    @include letter-spacing (36, -25);
+}
+h3 {
+    font-size: 30px;
+    line-height: 26px;
+    @include letter-spacing (30, -25);
+}
+h4 {
+    color: $black;
+    font-size: 24px;
+    line-height: 26px;
+    @include letter-spacing (24, -25);
+}
+
+h5 {
+  font-size: 21px;
+  line-height: 30px;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 26px;
+  @include letter-spacing (26, -25);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+    text-decoration: none; 
+    font-size: 14px;
+    font-family: $mon;
+
+    &:hover, &:focus {
+        text-decoration: none;
+        outline: 0;
+        outline-offset: 0; 
+    }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="search"], 
+textarea {
+    width: 100% !important;
+    padding: 14px 15px !important;
+    border: 0;
+    color: $black;
+    font-size: 12px;
+    box-shadow: none;
+    font-family: $mon;
+    font-weight: 500px;
+    text-transform: uppercase;
+    padding-left: 0 !important;
+    background-color: transparent;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &::-webkit-input-placeholder { 
+        color: $black;
+    }
+    &::-moz-placeholder { 
+        color: $black;
+    }
+    &:-ms-input-placeholder { 
+        color: $black;
+    }
+    &:-moz-placeholder { 
+        color: $black;
+    }
+
+    &:hover, &:focus {
+        outline: 0;
+    }
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background: transparent;
+}
+.media {
+    margin-top: 0;
+
+  img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.btn {
+    height: 65px;
+    color: $black;
+    width: 100%;
+    font-family: $mon;
+    font-size: 19px;
+    max-width: 190px;
+    display: flex;
+    font-weight: 500;
+    border-radius: 5px;
+    align-items: center;
+    background: $white;
+    justify-content: center;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+
+    &:hover, &:focus, &:active:focus {
+        outline: 0;
+        color: $white;
+        box-shadow: none;
+        outline-offset: 0;
+        border-color: transparent;
+        background-color: $secondary;
+    }
+}
+
+button {
+
+    &:hover, &:focus, &:active:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/**<==== Section Title ====>**/
+
+.section-title {
+
+    h4 {
+        color: $black;
+        padding: 12px 0;
+        position: relative;
+
+        &:after {
+            background-image: linear-gradient(180deg, #6e6e78 50%, #95959c 50%);
+            background-repeat: no-repeat;
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    h2 {
+        max-width: 260px;
+        margin-left: auto;
+        padding: 25px 0;
+    }
+
+    a {
+        width: 100%;
+        display: flex;
+        color: #282838;
+        font-size: 10px;
+        font-weight: 500;
+        max-width: 240px;
+        margin-left: auto;
+        align-items: center;
+
+        span {
+            flex-grow: 1;
+
+            img {
+                margin-left: auto;
+            }
+        }
+    }
+}
+/**<==== Header Area ====>**/
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 55px 0;
+    position: fixed;
+    background-color: $white;
+    transition: all .5s ease;
+
+    &.sticky {
+        padding: 35px 0;
+        background-color: $white;
+        -webkit-box-shadow: 0 0px 12px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0 0px 12px rgba(0, 0, 0, 0.16);
+        -ms-box-shadow: 0 0px 12px rgba(0, 0, 0, 0.16);
+        -o-box-shadow: 0 0px 12px rgba(0, 0, 0, 0.16);
+        box-shadow: 0 0px 30px rgba(0, 0, 0, 0.20);
+
+        .navbar {
+
+            &.navbar-default {
+
+                .navbar-header {
+
+                    .navbar-brand {
+
+                        img {
+                            max-width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container-fluid {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+
+    .navbar {
+
+        &.navbar-default {
+            border: 0;
+            margin: 0;
+            border-radius: 0;
+            background: transparent;
+
+            .navbar-header {
+
+                .navbar-brand {
+                    padding-top: 0px;
+                    margin-top: -5px;
+
+                    img {
+                        max-width: 100%;
+                        transition: all .5s ease;
+                    }
+                }
+            }
+
+            .navbar-nav {
+
+                &>li {
+
+                    &>a {
+                        color: #807f7f;
+                        font-size: 17px;
+                        padding-left: 17px;
+                        padding-right: 17px;
+                        font-weight: 500;
+                        line-height: 26px;
+                        @include letter-spacing(26, -25);
+                        transition: all .5s ease;
+                    }
+
+                    &.active, &:hover, &:focus {
+
+                        a {
+                            background-color: transparent;
+                            color: $black;
+                        }
+                    }
+                }
+
+                .open>a {
+                    background: transparent !important;
+                    color: #807f7f;
+
+                    &:hover, &:focus {
+                        color: #807f7f;
+                        background: transparent !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**<==== Banner Area ====>**/
+.banner {
+    background-color: #eeeeed;
+    height: 530px;
+
+    .container-fluid {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .section-title {
+        padding: 58px 0;
+
+        &.text-right {
+
+            h4 {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+/**---- Responsive CSS ----**/
+@import "responsive";

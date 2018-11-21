@@ -1,0 +1,147 @@
+
+
+
+@media only screen and (max-width: 1199px) {
+
+}
+@media only screen and (max-width: 1023px) {
+    /* navbar toggle */ 
+    .navbar-toggle {
+        margin: 0;
+        display: block;
+        border: 0;
+        position: fixed;
+        right: 10px;
+
+        .icon-bar {
+            margin: 0 auto;
+
+            &:nth-child(1) {
+                width: 30px;
+            }
+            &:nth-child(4) {        
+                width: 30px;
+            }
+        }
+
+        &:hover {
+
+            .icon-bar {
+
+                &:nth-child(1) {
+                    -webkit-transform: translateY(-2px);
+                    -moz-transform: translateY(-2px);
+                    -ms-transform: translateY(-2px);
+                    -o-transform: translateY(-2px);
+                    transform: translateY(-2px);
+                }
+                &:nth-child(2) {
+                    
+                }
+                &:nth-child(4) {        
+                    -webkit-transform: translateY(2px);
+                    -moz-transform: translateY(2px);
+                    -ms-transform: translateY(2px);
+                    -o-transform: translateY(2px);
+                    transform: translateY(2px);
+                }
+            }
+        }
+
+        &:hover, &:focus {
+            background-color: transparent !important;
+
+            &:before {
+                opacity: 1;
+                -webkit-transform: translateX(0);
+                -moz-transform: translateX(0);
+                -ms-transform: translateX(0);
+                -o-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        &.in {
+
+            .icon-bar {
+                -webkit-transition: -webkit-transform 150ms linear;
+                transition: -webkit-transform 150ms linear;
+                transition: transform 150ms linear;
+                transition: transform 150ms linear, -webkit-transform 150ms linear;
+
+                &:nth-child(2) {
+                    -webkit-transform: translateY(4px);
+                    -moz-transform: translateY(4px);
+                    -ms-transform: translateY(4px);
+                    -o-transform: translateY(4px);
+                    transform: translateY(4px);
+
+                    .inner {
+                        -webkit-transform: rotate(45deg);
+                        -moz-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        -o-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+                &:nth-child(1) {
+                    opacity: 0;
+                }
+                &:nth-child(4) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {        
+                    -webkit-transform: translateY(-4px);
+                    -moz-transform: translateY(-4px);
+                    -ms-transform: translateY(-4px);
+                    -o-transform: translateY(-4px);
+                    transform: translateY(-4px);
+
+                    .inner {                            
+                        -webkit-transform: rotate(-45deg);
+                        -moz-transform: rotate(-45deg);
+                        -ms-transform: rotate(-45deg);
+                        -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+        .icon-bar {
+            width: 40px;
+            margin-bottom: 6px;
+            background-color: transparent !important;
+            -webkit-transition: -webkit-transform 150ms linear 150ms;
+            transition: -webkit-transform 150ms linear 150ms;
+            transition: transform 150ms linear 150ms;
+            transition: transform 150ms linear 150ms, -webkit-transform 150ms linear 150ms;
+
+            .inner {
+                width: 100%;
+                height: 3px;
+                display: block;
+                border-radius: 4px;
+                background-color: $secondary;
+                -webkit-transition: background-color 150ms linear, opacity 0s linear 150ms, -webkit-transform 150ms linear;
+                transition: background-color 150ms linear, opacity 0s linear 150ms, -webkit-transform 150ms linear;
+                transition: transform 150ms linear, background-color 150ms linear, opacity 0s linear 150ms;
+                transition: transform 150ms linear, background-color 150ms linear, opacity 0s linear 150ms, -webkit-transform 150ms linear;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    
+}
+
+@media only screen and (max-width: 575px) {
+    .col {
+        width: 100% !important;
+    }
+}
